@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XiaoFei</title>
+  <icon>http://example.com/icon.png</icon>
+  <subtitle>naste.top</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-11-05T05:08:04.142Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>XiaoFei</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows查看端口占用并结束进程</title>
+    <link href="http://example.com/posts/93d68c83.html"/>
+    <id>http://example.com/posts/93d68c83.html</id>
+    <published>2022-11-04T01:25:23.000Z</published>
+    <updated>2022-11-05T05:08:04.142Z</updated>
+    
+    
+    <summary type="html">Windows查看端口占用并结束进程</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenWrt配置Nginx</title>
+    <link href="http://example.com/posts/9f5166cb.html"/>
+    <id>http://example.com/posts/9f5166cb.html</id>
+    <published>2022-11-02T03:52:05.000Z</published>
+    <updated>2022-11-05T05:08:04.137Z</updated>
+    
+    
+    <summary type="html">OpenWrt配置Nginx</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="OpenWrt" scheme="http://example.com/tags/OpenWrt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将JetBrains产品加入右键菜单</title>
+    <link href="http://example.com/posts/3a2c624e.html"/>
+    <id>http://example.com/posts/3a2c624e.html</id>
+    <published>2022-10-30T10:01:02.000Z</published>
+    <updated>2022-10-30T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">将JetBrains产品加入右键菜单</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="http://example.com/tags/Other/"/>
+    
+    <category term="JetBrains" scheme="http://example.com/tags/JetBrains/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typora通过PicGO上传图片</title>
+    <link href="http://example.com/posts/736f768b.html"/>
+    <id>http://example.com/posts/736f768b.html</id>
+    <published>2022-07-26T10:01:02.000Z</published>
+    <updated>2022-07-26T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Typora通过PicGO上传图片</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="PicGO" scheme="http://example.com/tags/PicGO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MinIO基本使用</title>
+    <link href="http://example.com/posts/4b6946f8.html"/>
+    <id>http://example.com/posts/4b6946f8.html</id>
+    <published>2022-07-25T10:01:02.000Z</published>
+    <updated>2022-07-25T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">MinIO基本使用</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="Other" scheme="http://example.com/tags/Other/"/>
+    
+    <category term="MinIO" scheme="http://example.com/tags/MinIO/"/>
+    
+    <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件下载链接</title>
+    <link href="http://example.com/posts/42bed1ea.html"/>
+    <id>http://example.com/posts/42bed1ea.html</id>
+    <published>2022-07-24T10:01:02.000Z</published>
+    <updated>2022-07-24T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">软件下载链接</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="http://example.com/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PicGO设置</title>
+    <link href="http://example.com/posts/ce3b29f9.html"/>
+    <id>http://example.com/posts/ce3b29f9.html</id>
+    <published>2022-07-23T10:01:02.000Z</published>
+    <updated>2022-07-23T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">PicGO设置</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="PicGO" scheme="http://example.com/tags/PicGO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Qv2ray安装和设置</title>
+    <link href="http://example.com/posts/bc7a29e7.html"/>
+    <id>http://example.com/posts/bc7a29e7.html</id>
+    <published>2022-07-22T10:01:02.000Z</published>
+    <updated>2022-07-22T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Qv2ray安装和设置</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="http://example.com/tags/Other/"/>
+    
+    <category term="Qv2ray" scheme="http://example.com/tags/Qv2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Win11下面使用IE浏览器</title>
+    <link href="http://example.com/posts/4b6946f8.html"/>
+    <id>http://example.com/posts/4b6946f8.html</id>
+    <published>2022-07-20T10:01:02.000Z</published>
+    <updated>2022-07-20T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Win11下面使用IE浏览器</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="http://example.com/tags/Other/"/>
+    
+    <category term="IE" scheme="http://example.com/tags/IE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows开放端口</title>
+    <link href="http://example.com/posts/2472abcb.html"/>
+    <id>http://example.com/posts/2472abcb.html</id>
+    <published>2022-07-19T10:01:02.000Z</published>
+    <updated>2022-07-19T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Windows开放端口</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="http://example.com/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CompletableFuture 异步编排使用</title>
+    <link href="http://example.com/posts/be5ea42d.html"/>
+    <id>http://example.com/posts/be5ea42d.html</id>
+    <published>2022-07-18T10:01:02.000Z</published>
+    <updated>2022-07-18T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">CompletableFuture 异步编排使用</summary>
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java策略设计模式</title>
+    <link href="http://example.com/posts/8c263a51.html"/>
+    <id>http://example.com/posts/8c263a51.html</id>
+    <published>2022-07-17T10:01:02.000Z</published>
+    <updated>2022-07-17T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Java策略设计模式</summary>
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="策略模式" scheme="http://example.com/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java设计模式</title>
+    <link href="http://example.com/posts/41e00c03.html"/>
+    <id>http://example.com/posts/41e00c03.html</id>
+    <published>2022-07-16T10:01:02.000Z</published>
+    <updated>2022-07-16T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Java设计模式</summary>
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JUC并发编程</title>
+    <link href="http://example.com/posts/eb9166f8.html"/>
+    <id>http://example.com/posts/eb9166f8.html</id>
+    <published>2022-07-15T10:01:02.000Z</published>
+    <updated>2022-07-15T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">JUC并发编程</summary>
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    <category term="JUC" scheme="http://example.com/tags/JUC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Frps基本使用</title>
+    <link href="http://example.com/posts/21c4ff3a.html"/>
+    <id>http://example.com/posts/21c4ff3a.html</id>
+    <published>2022-07-14T10:01:02.000Z</published>
+    <updated>2022-07-14T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Frps基本使用</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="内网穿透" scheme="http://example.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+    <category term="Frps" scheme="http://example.com/tags/Frps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jenkins基本使用</title>
+    <link href="http://example.com/posts/3f50e50a.html"/>
+    <id>http://example.com/posts/3f50e50a.html</id>
+    <published>2022-07-13T10:01:02.000Z</published>
+    <updated>2022-07-13T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Jenkins基本使用</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Jenkins" scheme="http://example.com/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shell编程基本使用</title>
+    <link href="http://example.com/posts/6bff611c.html"/>
+    <id>http://example.com/posts/6bff611c.html</id>
+    <published>2022-07-12T10:01:02.000Z</published>
+    <updated>2022-07-12T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Shell编程基本使用</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Shell" scheme="http://example.com/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tengine基本使用</title>
+    <link href="http://example.com/posts/baf6259.html"/>
+    <id>http://example.com/posts/baf6259.html</id>
+    <published>2022-07-11T10:01:02.000Z</published>
+    <updated>2022-07-11T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Tengine基本使用</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="Tengine" scheme="http://example.com/tags/Tengine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Openresty基本使用</title>
+    <link href="http://example.com/posts/44da86b2.html"/>
+    <id>http://example.com/posts/44da86b2.html</id>
+    <published>2022-07-10T10:01:02.000Z</published>
+    <updated>2022-07-10T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">Openresty基本使用</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="Openresty" scheme="http://example.com/tags/Openresty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NginxPlus基本使用</title>
+    <link href="http://example.com/posts/349c84d3.html"/>
+    <id>http://example.com/posts/349c84d3.html</id>
+    <published>2022-07-09T10:01:02.000Z</published>
+    <updated>2022-07-09T10:01:02.000Z</updated>
+    
+    
+    <summary type="html">NginxPlus基本使用</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="NginxPlus" scheme="http://example.com/tags/NginxPlus/"/>
+    
+  </entry>
+  
+</feed>
