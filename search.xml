@@ -8,7 +8,7 @@
       <link href="/posts/3397838483.html"/>
       <url>/posts/3397838483.html</url>
       
-        <content type="html"><![CDATA[<h1 id="下载OSSUtil"><a href="#下载OSSUtil" class="headerlink" title="下载OSSUtil"></a>下载OSSUtil</h1><p>下载页面：<a href="https://help.aliyun.com/document_detail/120075.htm?spm=a2c4g.11186623.0.0.52613e06BC0HKs#concept-303829">https://help.aliyun.com/document_detail/120075.htm?spm=a2c4g.11186623.0.0.52613e06BC0HKs#concept-303829</a></p><h1 id="Windows使用"><a href="#Windows使用" class="headerlink" title="Windows使用"></a>Windows使用</h1><blockquote><p><strong>格式：ossutil64.exe config -e <code>Endpoint（地域节点）</code>  -i  <code>AccessKeyId</code> -k <code>AccessKeySecret</code> </strong></p></blockquote><p>参考文档：<a href="https://help.aliyun.com/document_detail/179389.htm?spm=a2c4g.11186623.0.0.5bdd21a163o0XI#concept-1937459">https://help.aliyun.com/document_detail/179389.htm?spm=a2c4g.11186623.0.0.5bdd21a163o0XI#concept-1937459</a></p><p><img src="E:/images/image-20221107194253778.png" alt="image-20221107194253778"></p><h1 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h1><h2 id="批量下载文件"><a href="#批量下载文件" class="headerlink" title="批量下载文件"></a>批量下载文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">批量下载文件</span></span><br><span class="line">ossutil64.exe cp -r oss://bucketName/ ./本地文件夹/</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="下载OSSUtil"><a href="#下载OSSUtil" class="headerlink" title="下载OSSUtil"></a>下载OSSUtil</h1><p>下载页面：<a href="https://help.aliyun.com/document_detail/120075.htm?spm=a2c4g.11186623.0.0.52613e06BC0HKs#concept-303829">https://help.aliyun.com/document_detail/120075.htm?spm=a2c4g.11186623.0.0.52613e06BC0HKs#concept-303829</a></p><h1 id="Windows使用"><a href="#Windows使用" class="headerlink" title="Windows使用"></a>Windows使用</h1><blockquote><p><strong>格式：ossutil64.exe config -e <code>Endpoint（地域节点）</code>  -i  <code>AccessKeyId</code> -k <code>AccessKeySecret</code> </strong></p></blockquote><p>参考文档：<a href="https://help.aliyun.com/document_detail/179389.htm?spm=a2c4g.11186623.0.0.5bdd21a163o0XI#concept-1937459">https://help.aliyun.com/document_detail/179389.htm?spm=a2c4g.11186623.0.0.5bdd21a163o0XI#concept-1937459</a></p><p><img src="https://minio.naste.top:1024/images/image-20221107194253778.png" alt="image-20221107194253778"></p><h1 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h1><h2 id="批量下载文件"><a href="#批量下载文件" class="headerlink" title="批量下载文件"></a>批量下载文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">批量下载文件</span></span><br><span class="line">ossutil64.exe cp -r oss://bucketName/ ./本地文件夹/</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -1354,9 +1354,9 @@
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1365,9 +1365,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
