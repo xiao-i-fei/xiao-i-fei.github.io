@@ -373,11 +373,11 @@
     <category term="Linux" scheme="http://example.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
-    
     <category term="Frps" scheme="http://example.com/tags/Frps/"/>
     
     <category term="内网穿透" scheme="http://example.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
   </entry>
   
@@ -417,9 +417,9 @@
     <category term="Linux" scheme="http://example.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
-    
     <category term="Shell" scheme="http://example.com/tags/Shell/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
   </entry>
   
