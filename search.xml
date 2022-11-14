@@ -8,7 +8,7 @@
       <link href="/posts/1226402464.html"/>
       <url>/posts/1226402464.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Linux使用nohup项目后台启动"><a href="#Linux使用nohup项目后台启动" class="headerlink" title="Linux使用nohup项目后台启动"></a>Linux使用nohup项目后台启动</h1><p><strong>参考：<a href="https://www.cnblogs.com/sueyyyy/p/9958836.html">https://www.cnblogs.com/sueyyyy/p/9958836.html</a></strong><br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出默认日志文件启动</span></span><br><span class="line">nohup 启动命令 &amp;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出到指定日志文件夹中启动</span></span><br><span class="line">nohup 启动命令 &gt; xxx.out  2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure></p><h1 id="Shell脚本控制项目启动"><a href="#Shell脚本控制项目启动" class="headerlink" title="Shell脚本控制项目启动"></a>Shell脚本控制项目启动</h1><h2 id="启动Shell脚本"><a href="#启动Shell脚本" class="headerlink" title="启动Shell脚本"></a>启动Shell脚本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">开始关闭frps</span></span><br><span class="line">./stop.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">frps后台启动开始</span></span><br><span class="line">echo &quot;----------------  frps后台启动开始  ----------------&quot;</span><br><span class="line">nohup ./frps -c frps.ini &gt; frps.log 2&gt;&amp;1 &amp;</span><br><span class="line">echo &quot;----------------  frps启动成功  ----------------&quot;</span><br></pre></td></tr></table></figure><h2 id="关闭Shell脚本"><a href="#关闭Shell脚本" class="headerlink" title="关闭Shell脚本"></a>关闭Shell脚本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取frps的pId</span></span><br><span class="line">pId=`ps -ef | grep frps | grep -v grep | awk &#x27;&#123; print $1 &#125;&#x27;`</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出pId</span></span><br><span class="line">echo &quot;----------------  frps的pId：$pId  ----------------&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">判断pId是否为空</span></span><br><span class="line">if [ -z $pId ];</span><br><span class="line">then</span><br><span class="line">echo &quot;----------------  frps未启动  ----------------&quot;</span><br><span class="line">else</span><br><span class="line">kill -9 $pId</span><br><span class="line">echo &quot;----------------  项目停止成功  ----------------&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查项目是否停止成功</span></span><br><span class="line">check=`ps -ef | grep frps | grep -v grep | awk &#x27;&#123; print $1 &#125;&#x27;`</span><br><span class="line">if [ -z $check ];</span><br><span class="line">then</span><br><span class="line">                        echo &quot;----------------  frps：$pId已停止  ----------------&quot;</span><br><span class="line">                  else</span><br><span class="line">                        echo &quot;----------------  pId：$pId停止失败  ----------------&quot;</span><br><span class="line">fi</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="Linux使用nohup项目后台启动"><a href="#Linux使用nohup项目后台启动" class="headerlink" title="Linux使用nohup项目后台启动"></a>Linux使用nohup项目后台启动</h1><p><strong>参考：<a href="https://www.cnblogs.com/sueyyyy/p/9958836.html">https://www.cnblogs.com/sueyyyy/p/9958836.html</a></strong><br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出默认日志文件启动</span></span><br><span class="line">nohup 启动命令 &amp;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出到指定日志文件夹中启动</span></span><br><span class="line">nohup 启动命令 &gt; xxx.out  2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure></p><h1 id="Shell脚本控制项目启动"><a href="#Shell脚本控制项目启动" class="headerlink" title="Shell脚本控制项目启动"></a>Shell脚本控制项目启动</h1><h2 id="启动Shell脚本"><a href="#启动Shell脚本" class="headerlink" title="启动Shell脚本"></a>启动Shell脚本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">开始关闭frps</span></span><br><span class="line">./stop.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">frps后台启动开始</span></span><br><span class="line">echo &quot;----------------  frps后台启动开始  ----------------&quot;</span><br><span class="line">nohup ./frps -c frps.ini &gt; frps.log 2&gt;&amp;1 &amp;</span><br><span class="line">echo &quot;----------------  frps启动成功  ----------------&quot;</span><br></pre></td></tr></table></figure><h2 id="关闭Shell脚本"><a href="#关闭Shell脚本" class="headerlink" title="关闭Shell脚本"></a>关闭Shell脚本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取frps的pId</span></span><br><span class="line">pId=$(ps -ef | grep frps | grep -v grep | awk &#x27;&#123; print $1 &#125;&#x27;)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出pId</span></span><br><span class="line">echo &quot;----------------  frps的pId：$pId  ----------------&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">判断pId是否为空</span></span><br><span class="line">if [ -z $pId ]; then</span><br><span class="line">    echo &quot;----------------  frps未启动  ----------------&quot;</span><br><span class="line">else</span><br><span class="line">    kill -9 $pId</span><br><span class="line">    echo &quot;----------------  项目停止成功  ----------------&quot;</span><br><span class="line">    # 检查项目是否停止成功</span><br><span class="line">    check=$(ps -ef | grep frps | grep -v grep | awk &#x27;&#123; print $1 &#125;&#x27;)</span><br><span class="line">    if [ -z $check ]; then</span><br><span class="line">        echo &quot;----------------  frps：$pId已停止  ----------------&quot;</span><br><span class="line">    else</span><br><span class="line">        echo &quot;----------------  pId：$pId停止失败  ----------------&quot;</span><br><span class="line">    fi</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -184,13 +184,13 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Other </tag>
             
             <tag> MinIO </tag>
             
             <tag> 图床 </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -458,11 +458,11 @@
       
         <tags>
             
+            <tag> Linux </tag>
+            
             <tag> Frps </tag>
             
             <tag> 内网穿透 </tag>
-            
-            <tag> Linux </tag>
             
         </tags>
       
@@ -514,9 +514,9 @@
       
         <tags>
             
-            <tag> Shell </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Shell </tag>
             
         </tags>
       
@@ -1383,9 +1383,9 @@
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1394,9 +1394,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
