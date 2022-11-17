@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Linux中安装hugo</title>
+      <link href="/posts/1010346896.html"/>
+      <url>/posts/1010346896.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://minio.naste.top:1024/images/image-20221117092554585.png" alt="image-20221117092554585"></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote><p><strong>解压后将hugo放入<code>/usr/local/bin</code>下面</strong></p></blockquote><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://minio.naste.top:1024/images/image-20221117092742964.png" alt="image-20221117092742964"></p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入指定目录</span></span><br><span class="line">cd /usr/local/bin</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">给hugo添加可执行权限</span></span><br><span class="line">ch</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Hugo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SpringBoot中使用JSR303进行数据校验</title>
       <link href="/posts/87461767.html"/>
       <url>/posts/87461767.html</url>
