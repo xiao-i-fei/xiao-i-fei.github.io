@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-17T12:21:06.000Z</updated>
+  <updated>2022-11-20T08:24:24.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot整合SpringCache进行Redis缓存</title>
+    <link href="http://example.com/posts/333814905.html"/>
+    <id>http://example.com/posts/333814905.html</id>
+    <published>2022-11-20T08:24:24.000Z</published>
+    <updated>2022-11-20T08:24:24.000Z</updated>
+    
+    
+    <summary type="html">SpringBoot整合SpringCache进行Redis缓存</summary>
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
+    
+    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkins命令无法后台运行，使BUILD_ID=dontKillMe解决</title>
@@ -420,29 +443,6 @@
     <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     <category term="JUC" scheme="http://example.com/tags/JUC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Frps基本使用</title>
-    <link href="http://example.com/posts/21c4ff3a.html"/>
-    <id>http://example.com/posts/21c4ff3a.html</id>
-    <published>2022-07-14T10:01:02.000Z</published>
-    <updated>2022-07-14T10:01:02.000Z</updated>
-    
-    
-    <summary type="html">Frps基本使用</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
-    
-    <category term="Frps" scheme="http://example.com/tags/Frps/"/>
-    
-    <category term="内网穿透" scheme="http://example.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
   </entry>
   
