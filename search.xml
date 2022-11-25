@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>SpringBoot打包安装到本地maven，项目仓库引入没有注释解决</title>
+      <link href="/posts/3394196231.html"/>
+      <url>/posts/3394196231.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="引入打包插件"><a href="#引入打包插件" class="headerlink" title="引入打包插件"></a>引入打包插件</h1><blockquote><p><strong>当maven打包项目到本地仓库时不会打包源码，导致在引入包时没有注释</strong></p></blockquote><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--生成源码jar包--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-source-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">id</span>&gt;</span>attach-sources<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">goal</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目构建工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Maven </tag>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SpringBoot整合SpringCache进行Redis缓存</title>
       <link href="/posts/333814905.html"/>
       <url>/posts/333814905.html</url>
@@ -22,9 +49,9 @@
             
             <tag> Java </tag>
             
-            <tag> Redis </tag>
-            
             <tag> Spring </tag>
+            
+            <tag> Redis </tag>
             
         </tags>
       
@@ -570,11 +597,11 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Frps </tag>
             
             <tag> 内网穿透 </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -626,9 +653,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Shell </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -1495,9 +1522,9 @@
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1506,9 +1533,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
