@@ -119,9 +119,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
-    
     <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
     
   </entry>
   
@@ -401,14 +401,14 @@
   </entry>
   
   <entry>
-    <title>Java策略设计模式</title>
+    <title>设计模式案例</title>
     <link href="http://example.com/posts/8c263a51.html"/>
     <id>http://example.com/posts/8c263a51.html</id>
     <published>2022-07-17T10:01:02.000Z</published>
     <updated>2022-07-17T10:01:02.000Z</updated>
     
     
-    <summary type="html">Java策略设计模式</summary>
+    <summary type="html">设计模式案例</summary>
     
     
     
@@ -418,8 +418,6 @@
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
     <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="策略模式" scheme="http://example.com/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
