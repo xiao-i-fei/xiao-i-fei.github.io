@@ -54,9 +54,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
-    
     <category term="Redis" scheme="http://example.com/tags/Redis/"/>
+    
+    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
     
   </entry>
   
@@ -119,9 +119,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
-    
     <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
     
   </entry>
   
