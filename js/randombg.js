@@ -8,7 +8,21 @@ var backimg =[
     "url(/img/1515952743754.png)",
     "url(/img/1515952743758.png)",
     "url(/img/1515952743772.jpg)",
-    "url(/img/1515952743787.jpg)"
+    "url(/img/1515952743787.jpg)",
+    "url(/img/1669778297.jpg)",
+    "url(/img/1669778299.jpg)",
+    "url(/img/1669778301.jpg)",
+    "url(/img/1669778302.jpg)",
+    "url(/img/1669778310.jpg)",
+    "url(/img/1669778312.jpg)",
+    "url(/img/1669778313.jpg)",
+    "url(/img/1669778314.jpg)",
+    "url(/img/1669778316.jpg)",
+    "url(/img/1669778318.jpg)",
+    "url(/img/1669778319.png)",
+    "url(/img/1669778322.jpg)",
+    "url(/img/1669778326.png)",
+    "url(/img/1669778328.png)"
 ];
 //获取背景图片总数，生成随机数
 var bgindex =Math.floor(Math.random() * backimg.length);
