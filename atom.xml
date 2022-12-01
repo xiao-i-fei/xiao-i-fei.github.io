@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-30T13:28:23.000Z</updated>
+  <updated>2022-12-01T09:09:17.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux中安装NodeJs</title>
+    <link href="http://example.com/posts/1451301508.html"/>
+    <id>http://example.com/posts/1451301508.html</id>
+    <published>2022-12-01T09:09:17.000Z</published>
+    <updated>2022-12-01T09:09:17.000Z</updated>
+    
+    
+    <summary type="html">Linux中安装NodeJs</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Node" scheme="http://example.com/tags/Node/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringBoot项目打包瘦身</title>
@@ -75,9 +96,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
-    
     <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
     
   </entry>
   
@@ -226,9 +247,9 @@
     
     <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
-    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
-    
     <category term="OpenWrt" scheme="http://example.com/tags/OpenWrt/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
     
   </entry>
   
@@ -418,27 +439,6 @@
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
     <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式案例</title>
-    <link href="http://example.com/posts/8c263a51.html"/>
-    <id>http://example.com/posts/8c263a51.html</id>
-    <published>2022-07-17T10:01:02.000Z</published>
-    <updated>2022-07-17T10:01:02.000Z</updated>
-    
-    
-    <summary type="html">设计模式案例</summary>
-    
-    
-    
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-    <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
