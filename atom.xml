@@ -96,9 +96,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
-    
     <category term="Redis" scheme="http://example.com/tags/Redis/"/>
+    
+    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
     
   </entry>
   
@@ -247,9 +247,9 @@
     
     <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
-    <category term="OpenWrt" scheme="http://example.com/tags/OpenWrt/"/>
-    
     <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="OpenWrt" scheme="http://example.com/tags/OpenWrt/"/>
     
   </entry>
   
