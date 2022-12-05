@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-01T09:09:17.000Z</updated>
+  <updated>2022-12-05T06:52:17.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows安装RabbitMQ</title>
+    <link href="http://example.com/posts/1874760629.html"/>
+    <id>http://example.com/posts/1874760629.html</id>
+    <published>2022-12-05T06:52:17.000Z</published>
+    <updated>2022-12-05T06:52:17.000Z</updated>
+    
+    
+    <summary type="html">Windows安装RabbitMQ</summary>
+    
+    
+    
+    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="RabbitMQ" scheme="http://example.com/tags/RabbitMQ/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux中安装NodeJs</title>
@@ -96,9 +117,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
-    
     <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
     
   </entry>
   
@@ -161,9 +182,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
-    
     <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
     
   </entry>
   
@@ -307,7 +328,7 @@
     
     
     
-    <category term="Other" scheme="http://example.com/categories/Other/"/>
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
     
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
@@ -418,27 +439,6 @@
     
     
     <category term="Other" scheme="http://example.com/tags/Other/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CompletableFuture 异步编排使用</title>
-    <link href="http://example.com/posts/be5ea42d.html"/>
-    <id>http://example.com/posts/be5ea42d.html</id>
-    <published>2022-07-18T10:01:02.000Z</published>
-    <updated>2022-07-18T10:01:02.000Z</updated>
-    
-    
-    <summary type="html">CompletableFuture 异步编排使用</summary>
-    
-    
-    
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
