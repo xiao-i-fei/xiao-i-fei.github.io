@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>安装NodeJs和安装vue</title>
+      <link href="/posts/2623226920.html"/>
+      <url>/posts/2623226920.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="查看Node版本和npm版本"><a href="#查看Node版本和npm版本" class="headerlink" title="查看Node版本和npm版本"></a>查看Node版本和npm版本</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><h1 id="环境变量的配置"><a href="#环境变量的配置" class="headerlink" title="环境变量的配置"></a>环境变量的配置</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;D:\nodejs\node_global&quot;</span><br><span class="line">npm config set cache &quot;D:\nodejs\node_cache&quot;</span><br></pre></td></tr></table></figure><h1 id="配置node环境变量"><a href="#配置node环境变量" class="headerlink" title="配置node环境变量"></a>配置node环境变量</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://blog-xiaofei.oss-cn-hongkong.aliyuncs.com/articles/a279dec7b16b6cd9015a5ba6c59f7545.png" alt="Snipaste_20220614_211055.png"></p><h1 id="npm安装vue"><a href="#npm安装vue" class="headerlink" title="npm安装vue"></a>npm安装vue</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看当前镜像源</span><br><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"># 如果不是淘宝镜像，如果不是淘宝镜像，将当前镜像设置为淘宝镜像</span><br><span class="line">npm config set registry http://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"># 安装vue</span><br><span class="line">npm install -g vue</span><br><span class="line"></span><br><span class="line"># 安装vue-cli</span><br><span class="line">npm install -g vue-cli</span><br><span class="line"></span><br><span class="line"># 查看vue版本</span><br><span class="line">vue -V</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="直接设置上述配置"><a href="#直接设置上述配置" class="headerlink" title="直接设置上述配置"></a>直接设置上述配置</h1><blockquote><p><strong>在当前用户下面创建<code>.npmrc</code>文件</strong><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">prefix=D:\nodejs\node_global</span><br><span class="line">cache=D:\nodejs\node_cache</span><br><span class="line">registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://blog-xiaofei.oss-cn-hongkong.aliyuncs.com/articles/8fa32eaa132054a7c32bf3c58e39b898.png" alt="Snipaste_20220614_210801.png"></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Node </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows安装RabbitMQ</title>
       <link href="/posts/1874760629.html"/>
       <url>/posts/1874760629.html</url>
@@ -130,9 +157,9 @@
             
             <tag> Java </tag>
             
-            <tag> Spring </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> Spring </tag>
             
         </tags>
       
