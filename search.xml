@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>SpringBoot整合Knife4j</title>
+      <link href="/posts/4207195884.html"/>
+      <url>/posts/4207195884.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>注：该文档使用于SpringBoot 2.2.x — 2.5.x</strong></p></blockquote><h1 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h1><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--knife4j-spring-boot-starter--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.xiaoymin<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>knife4j-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="Knife4j配置类"><a href="#Knife4j配置类" class="headerlink" title="Knife4j配置类"></a>Knife4j配置类</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.builders.ApiInfoBuilder;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.builders.PathSelectors;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.builders.RequestHandlerSelectors;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.service.Contact;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.spi.DocumentationType;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.spring.web.plugins.Docket;</span><br><span class="line"><span class="keyword">import</span> springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * User: XiaoFei</span></span><br><span class="line"><span class="comment"> * Date: 2022-12-12</span></span><br><span class="line"><span class="comment"> * Time: 22:10:39.766</span></span><br><span class="line"><span class="comment"> * Email: 1903078434@qq.com</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XiaoFei</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableSwagger2WebMvc</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Knife4jConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean(value = &quot;dockerBean&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Docket <span class="title function_">dockerBean</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//指定使用Swagger2规范</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Docket</span>(DocumentationType.SWAGGER_2)</span><br><span class="line">            <span class="comment">//设置文档的一些信息</span></span><br><span class="line">            .apiInfo(<span class="keyword">new</span> <span class="title class_">ApiInfoBuilder</span>()</span><br><span class="line">                     <span class="comment">// 接口文档显示标题</span></span><br><span class="line">                     .title(<span class="string">&quot;xiaofei-utils 接口测试文档&quot;</span>)</span><br><span class="line">                     <span class="comment">//描述字段支持Markdown语法</span></span><br><span class="line">                     .description(<span class="string">&quot;xiaofei-utils 接口测试文档&quot;</span>)</span><br><span class="line">                     <span class="comment">//设置服务Url</span></span><br><span class="line">                     .termsOfServiceUrl(<span class="string">&quot;https://utils.naste.top:1024/&quot;</span>)</span><br><span class="line">                     <span class="comment">//设置用户信息</span></span><br><span class="line">                     .contact(<span class="keyword">new</span> <span class="title class_">Contact</span>(<span class="string">&quot;XiaoFei&quot;</span>, <span class="string">&quot;https://utils.naste.top:1024/&quot;</span>, <span class="string">&quot;1903078434@qq.com&quot;</span>))</span><br><span class="line">                     <span class="comment">//设置执照信息</span></span><br><span class="line">                     .license(<span class="string">&quot;所有版权归XiaoFei所有&quot;</span>)</span><br><span class="line">                     <span class="comment">//设置执照信息URL</span></span><br><span class="line">                     .licenseUrl(<span class="string">&quot;https://utils.naste.top:1024/&quot;</span>)</span><br><span class="line">                     <span class="comment">//设置版本号</span></span><br><span class="line">                     .version(<span class="string">&quot;1.0&quot;</span>)</span><br><span class="line">                     <span class="comment">//构建</span></span><br><span class="line">                     .build())</span><br><span class="line">            <span class="comment">//分组名称</span></span><br><span class="line">            .groupName(<span class="string">&quot;xiaofei-utils&quot;</span>)</span><br><span class="line">            .select()</span><br><span class="line">            <span class="comment">//这里指定Controller扫描包路径</span></span><br><span class="line">            .apis(RequestHandlerSelectors.basePackage(<span class="string">&quot;com.xiaofei.utils.controller&quot;</span>))</span><br><span class="line">            .paths(PathSelectors.any())</span><br><span class="line">            .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="Knife4j配置文件"><a href="#Knife4j配置文件" class="headerlink" title="Knife4j配置文件"></a>Knife4j配置文件</h1><h2 id="部分配置文件"><a href="#部分配置文件" class="headerlink" title="部分配置文件"></a>部分配置文件</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># knife4j文档地址：https://doc.xiaominfo.com/docs/features</span></span><br><span class="line"><span class="attr">knife4j:</span></span><br><span class="line">  <span class="comment"># 是否开启增强模式</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 增强模式配置</span></span><br><span class="line">  <span class="attr">basic:</span></span><br><span class="line">    <span class="comment"># basic配置是否开启,默认为false【true：进入接口文档需要下面配置的用户名和密码    false：进入接口文档地址不需要用户名和密码】</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 用户名</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="comment"># 密码</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">  <span class="comment"># 是否生产环境【true：接口文档不允许访问。false：接口文档允许访问】</span></span><br><span class="line">  <span class="attr">production:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><h2 id="完整配置文件"><a href="#完整配置文件" class="headerlink" title="完整配置文件"></a>完整配置文件</h2><blockquote><p><strong>参考文档：<a href="https://doc.xiaominfo.com/docs/features/enhance">https://doc.xiaominfo.com/docs/features/enhance</a></strong></p></blockquote><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">knife4j:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">documents:</span></span><br><span class="line">    <span class="bullet">-</span></span><br><span class="line">      <span class="attr">group:</span> <span class="number">2.</span><span class="string">X版本</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">接口签名</span></span><br><span class="line">      <span class="attr">locations:</span> <span class="string">classpath:sign/*</span></span><br><span class="line">  <span class="attr">setting:</span></span><br><span class="line">    <span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line">    <span class="attr">enableSwaggerModels:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">enableDocumentManage:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">swaggerModelName:</span> <span class="string">实体类列表</span></span><br><span class="line">    <span class="attr">enableVersion:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableReloadCacheParameter:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableAfterScript:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">enableFilterMultipartApiMethodType:</span> <span class="string">POST</span></span><br><span class="line">    <span class="attr">enableFilterMultipartApis:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableRequestCache:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">enableHost:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableHostText:</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.193</span><span class="string">:8000</span></span><br><span class="line">    <span class="attr">enableHomeCustom:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">homeCustomLocation:</span> <span class="string">classpath:markdown/home.md</span></span><br><span class="line">    <span class="attr">enableSearch:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableFooter:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableFooterCustom:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">footerCustomContent:</span> <span class="string">Apache</span> <span class="string">License</span> <span class="number">2.0</span> <span class="string">|</span> <span class="string">Copyright</span>  <span class="number">2019</span><span class="string">-[小飞Knife4j接口文档](https://utils.naste.top/)</span></span><br><span class="line">    <span class="attr">enableDynamicParameter:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableDebug:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">enableOpenApi:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">enableGroup:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">cors:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">production:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">basic:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">test</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">12313</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> SpringBoot </tag>
+            
+            <tag> Knife4j </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>安装NodeJs和安装vue</title>
       <link href="/posts/2623226920.html"/>
       <url>/posts/2623226920.html</url>
@@ -101,9 +130,9 @@
       
         <tags>
             
-            <tag> Maven </tag>
-            
             <tag> SpringBoot </tag>
+            
+            <tag> Maven </tag>
             
         </tags>
       
@@ -128,9 +157,9 @@
       
         <tags>
             
-            <tag> Maven </tag>
-            
             <tag> SpringBoot </tag>
+            
+            <tag> Maven </tag>
             
         </tags>
       
@@ -240,9 +269,9 @@
             
             <tag> Java </tag>
             
-            <tag> Spring </tag>
-            
             <tag> JSR303 </tag>
+            
+            <tag> Spring </tag>
             
         </tags>
       
