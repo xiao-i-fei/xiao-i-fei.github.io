@@ -396,13 +396,13 @@
     <category term="Linux" scheme="http://example.com/categories/Linux/"/>
     
     
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
     <category term="Other" scheme="http://example.com/tags/Other/"/>
     
     <category term="MinIO" scheme="http://example.com/tags/MinIO/"/>
     
     <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
     
   </entry>
   
