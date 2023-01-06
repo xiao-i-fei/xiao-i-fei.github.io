@@ -323,9 +323,9 @@
             
             <tag> Java </tag>
             
-            <tag> JSR303 </tag>
-            
             <tag> Spring </tag>
+            
+            <tag> JSR303 </tag>
             
         </tags>
       
@@ -1711,6 +1711,17 @@
     
     
     <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/js/font_2264842_3izu8i5eoc2.js"/>
       <url>/js/font_2264842_3izu8i5eoc2.js</url>
@@ -1725,17 +1736,6 @@
       <title>友情链接</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

@@ -268,9 +268,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
-    
     <category term="Spring" scheme="http://example.com/tags/Spring/"/>
+    
+    <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
     
   </entry>
   
