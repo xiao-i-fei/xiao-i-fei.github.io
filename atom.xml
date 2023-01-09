@@ -268,9 +268,9 @@
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
     
-    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
-    
     <category term="JSR303" scheme="http://example.com/tags/JSR303/"/>
+    
+    <category term="Spring" scheme="http://example.com/tags/Spring/"/>
     
   </entry>
   
@@ -396,9 +396,9 @@
     <category term="Other" scheme="http://example.com/categories/Other/"/>
     
     
-    <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
     <category term="PicGO" scheme="http://example.com/tags/PicGO/"/>
+    
+    <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
@@ -421,9 +421,9 @@
     
     <category term="Other" scheme="http://example.com/tags/Other/"/>
     
-    <category term="MinIO" scheme="http://example.com/tags/MinIO/"/>
-    
     <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="MinIO" scheme="http://example.com/tags/MinIO/"/>
     
   </entry>
   
