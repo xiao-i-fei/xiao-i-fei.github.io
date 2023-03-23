@@ -6464,43 +6464,43 @@ blockquote.pullquote.right {
 /* 字体引入 */
 @font-face {
   font-family: YSHST;
-  src: url(http://www.naste.top:9090/file/woff2/优设好身体.woff2);
+  src: url(https://static.naste.top:1024/woff2/优设好身体.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: MiSans;
-  src: url(http://www.naste.top:9090/file/woff2/MiSans.woff2);
+  src: url(https://static.naste.top:1024/woff2/MiSans.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: HYTMR;
-  src: url(http://www.naste.top:9090/file/woff2/HYTangMeiRen55W.woff2);
+  src: url(https://static.naste.top:1024/woff2/HYTangMeiRen55W.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: LXGW;
-  src: url(http://www.naste.top:9090/file/woff2/霞鹜文楷.woff2);
+  src: url(https://static.naste.top:1024/woff2/霞鹜文楷.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: TTQHB;
-  src: url(http://www.naste.top:9090/file/woff2/甜甜圈海报字体.woff2);
+  src: url(https://static.naste.top:1024/woff2/甜甜圈海报字体.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: Consolas_1;
-  src: url(http://www.naste.top:9090/file/woff2/Consolas.woff2);
+  src: url(https://static.naste.top:1024/woff2/Consolas.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: ZhuZiAWan;
-  src: url(http://www.naste.top:9090/file/woff2/ZhuZiAWan2.woff2);
+  src: url(https://static.naste.top:1024/woff2/ZhuZiAWan2.woff2);
   font-display: swap;
 }
 
