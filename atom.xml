@@ -6,7 +6,7 @@
   <link href="https://www.naste.top:1024/atom.xml" rel="self"/>
   
   <link href="https://www.naste.top:1024/"/>
-  <updated>2023-04-12T02:20:30.819Z</updated>
+  <updated>2023-04-26T04:09:02.226Z</updated>
   <id>https://www.naste.top:1024/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM</title>
+    <link href="https://www.naste.top:1024/posts/1723864827.html"/>
+    <id>https://www.naste.top:1024/posts/1723864827.html</id>
+    <published>2023-04-25T13:33:12.000Z</published>
+    <updated>2023-04-26T04:09:02.226Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p>]]></content>
+    
+    
+    <summary type="html">JVM</summary>
+    
+    
+    
+    <category term="Java" scheme="https://www.naste.top:1024/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="JVM" scheme="https://www.naste.top:1024/tags/JVM/"/>
+    
+  </entry>
   
   <entry>
     <title>开机启动Shell脚本</title>
@@ -342,9 +365,9 @@
     
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="SpringCloud" scheme="https://www.naste.top:1024/tags/SpringCloud/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="定时任务" scheme="https://www.naste.top:1024/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
     
@@ -396,9 +419,9 @@
     
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="SpringCloud" scheme="https://www.naste.top:1024/tags/SpringCloud/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="SpringSession" scheme="https://www.naste.top:1024/tags/SpringSession/"/>
     
@@ -470,31 +493,6 @@
     <category term="Docker" scheme="https://www.naste.top:1024/tags/Docker/"/>
     
     <category term="Nacos" scheme="https://www.naste.top:1024/tags/Nacos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装composerize将docker run命令转换为docker-compose</title>
-    <link href="https://www.naste.top:1024/posts/395733340.html"/>
-    <id>https://www.naste.top:1024/posts/395733340.html</id>
-    <published>2023-02-24T03:23:48.000Z</published>
-    <updated>2023-03-21T07:52:37.682Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="开源地址"><a href="#开源地址" class="headerlink" title="开源地址"></a>开源地址</h1><p><a href="https://github.com/magicmark/composerize">https://github.com/magicmark/composerize</a></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><blockquote><p><strong>测试电脑或服务器必须有<code>node</code>环境</strong></p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">全局安装 composerize</span></span><br><span class="line">npm install composerize -g</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用</span></span><br><span class="line">composerize docker run命令</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">例如</span></span><br><span class="line">composerize docker run --name nacos-standalone -e MODE=standalone -v /path/application.properties:/home/nacos/conf/application.properties -p 8848:8848 -d -p 9848:9848  nacos/nacos-server:2.1.1</span><br></pre></td></tr></table></figure><p><img src="https://www.naste.top:9000/webp/image-20230224112913113-1677209421651-1.webp" alt=""></p>]]></content>
-    
-    
-    <summary type="html">安装composerize将docker run命令转换为docker-compose</summary>
-    
-    
-    
-    <category term="Linux" scheme="https://www.naste.top:1024/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://www.naste.top:1024/tags/Linux/"/>
-    
-    <category term="Docker" scheme="https://www.naste.top:1024/tags/Docker/"/>
-    
-    <category term="Node" scheme="https://www.naste.top:1024/tags/Node/"/>
     
   </entry>
   
