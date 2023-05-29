@@ -319,7 +319,7 @@ function getWeibo() {
     }
     for (let item of data) {
       html += '<div class="weibo-list-item"><div class="weibo-hotness ' + hotness[(item.hot || '荐')] + '">' + (item.hot || '荐') + '</div>'
-        + '<span class="weibo-title"><a title="' + item.title + '"href="' + item.url + '" target="_blank" rel="external nofollow noreferrer" style="color:#a08ed5">' + item.title + '</a></span>'
+        + '<span class="weibo-title"><a title="' + item.title + '" href="' + item.url + '" target="_blank" rel="external nofollow noreferrer" style="color:#a08ed5">' + item.title + '</a></span>'
         + '<div class="weibo-num"><span>' + item.num + '</span></div></div>'
     }
     html += '</div>'
@@ -438,15 +438,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
         n.fillStyle = "rgba(" + e.color + ", " + o.opacity + ")",
           o.y += o.velY,
           o.x += o.velX,
-          (o.y >= i.height || o.y <= 0) && l(o),
-          (o.x >= i.width || o.x <= 0) && l(o),
-          n.beginPath(),
-          n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
-          n.fill()
-      }
-      t(h)
-    }
-      , l = e => {
+          (o.y >= i.height || o.y <= 0) && l(o), (o.x>= i.width || o.x <= 2 0) && l(o), n.beginpath(), n.arc(o.x, o.y, o.size, 0, * math.pi), n.fill() } t(h) , l="e" => {
         e.x = Math.floor(Math.random() * i.width),
           e.y = 0,
           e.size = 3 * Math.random() + 2,
@@ -588,7 +580,7 @@ function owoBig() {
       else continue;
 
       // 禁用右键（手机端长按会出现右键菜单，为了体验给禁用掉）
-      if (document.body.clientWidth <= 768) owo_body.addEventListener('contextmenu', e => e.preventDefault());
+      if (document.body.clientWidth <= 768) owo_body.addeventlistener('contextmenu', e> e.preventDefault());
       // 鼠标移入
       owo_body.onmouseover = (e) => {
         if (flag && e.target.tagName == 'IMG') {
@@ -684,7 +676,7 @@ if (document.body.clientWidth > 992) {
       var getThis = this.prop("className") !== "" ? "." + this.prop("className") : this.prop("id") !== "" ? "#" +
         this.prop("id") : this.prop("nodeName");
       if ($(".neko").length == 0) {
-        this.after("<div class=\"neko\" id=" + setting.nekoname + " data-msg=\"" + setting.hoverMsg + "\"></div>");
+        this.after("<div class="\"neko\"" id=" + setting.nekoname + " data-msg="\""" + setting.hovermsg "\"></div>");
       }
       let basicInfo = getBasicInfo();
       $(getThis)
@@ -2393,7 +2385,7 @@ var calendarFormatter = {
 
       if (!isAdd) { // 处理闰月
 
-        if (leap <= i && leap > 0) {
+        if (leap <= i && leap> 0) {
 
           offset += leapDays(y); isAdd = true
 
@@ -2469,165 +2461,7 @@ if (m == 8 && dd == 14) {
 
 
 // 节假日
-if (m == 10 && dd <= 3) {//国庆节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 8 && dd == 15) {//搞来玩的，小日子投降
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("小日子已经投降" + (y - 1945).toString() + "年了😃");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 1 && dd == 1) {//元旦节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire(y.toString() + "年元旦快乐！🎉");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 3 && dd == 8) {//妇女节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("各位女神们，妇女节快乐！👩");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
-if (m == 4 && dd == 1) {//愚人节，随机谎话
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire(l[Math.floor(Math.random() * l.length)]);
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 5 && dd == 1) {//劳动节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("劳动节快乐\n为各行各业辛勤工作的人们致敬！");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 5 && dd == 4) {//青年节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("青年节快乐\n青春不是回忆逝去,而是把握现在！");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 5 && dd == 20) {//520
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今年是520情人节\n快和你喜欢的人一起过吧！💑");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 7 && dd == 1) {//建党节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 9 && dd == 10) {//教师节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("各位老师们教师节快乐！👩‍🏫");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 12 && dd == 25) {//圣诞节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("圣诞节快乐！🎄");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 8 && dd == 11) {//站长生日
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 6 && dd == 30) {//小猫咪生日
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-
-//传统节日部分
-
-if ((y == 2023 && m == 4 && dd == 5) || (y == 2024 && m == 4 && dd == 4) || (y == 2025 && m == 4 && dd == 4)) {//清明节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("清明时节雨纷纷,一束鲜花祭故人💐");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if ((y == 2023 && m == 12 && dd == 22) || (y == 2024 && m == 12 && dd == 21) || (y == 2025 && m == 12 && dd == 21)) {//冬至
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-
-var lunar = calendarFormatter.solar2lunar();
-
-//农历采用汉字计算，防止出现闰月导致问题
-
-if ((lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初六") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初五") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初四") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初三") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初二") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初一") || (lunar["IMonthCn"] == "腊月" && lunar["IDayCn"] == "三十") || (lunar["IMonthCn"] == "腊月" && lunar["IDayCn"] == "廿九")) {
-  //春节，本来只有大年三十到初六，但是有时候除夕是大年二十九，所以也加上了
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire(y.toString() + "年新年快乐\n🎊祝你心想事成，诸事顺利🎊");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if ((lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "十五")) {
-  //元宵节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("元宵节快乐\n送你一个大大的灯笼🧅");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if ((lunar["IMonthCn"] == "五月" && lunar["IDayCn"] == "初五")) {
-  //端午节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("端午节快乐\n请你吃一条粽子🍙");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if ((lunar["IMonthCn"] == "七月" && lunar["IDayCn"] == "初七")) {
-  //七夕节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if ((lunar["IMonthCn"] == "八月" && lunar["IDayCn"] == "十五")) {
-  //中秋节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("中秋节快乐\n请你吃一块月饼🍪");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if ((lunar["IMonthCn"] == "九月" && lunar["IDayCn"] == "初九")) {
-  //重阳节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("重阳节快乐\n独在异乡为异客，每逢佳节倍思亲");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-
-// 切换主题提醒
-// if (y == 2022 && m == 12 && (dd >= 18 && dd <= 20)) {
-//     if (sessionStorage.getItem("isPopupWindow") != "1") {
-//         Swal.fire("网站换成冬日限定主题啦⛄");
-//         sessionStorage.setItem("isPopupWindow", "1");
-//     }
-// }
-
-
-/* 节日弹窗 end */
-
-//----------------------------------------------------------------
-
-/* 听话鼠标 start */
-var CURSOR;
-
-Math.lerp = (a, b, n) => (1 - n) * a + n * b;
+if (m == 10 && dd <= 1 3 4 5 6 7 8 9 12 520 2022 2023 2024 2025 3) { 国庆节 if (sessionstorage.getitem("ispopupwindow") !="1" ) swal.fire("祝祖国" + (y - 1949).tostring() "岁生日快乐！"); sessionstorage.setitem("ispopupwindow", "1"); } (m="=" && dd="=" 15) 搞来玩的，小日子投降 swal.fire("小日子已经投降" 1945).tostring() "年了😃"); 1) 元旦节 swal.fire(y.tostring() "年元旦快乐！🎉"); 8) 妇女节 swal.fire("各位女神们，妇女节快乐！👩"); l="["非常抱歉，因为不可控原因，博客将于明天停止运营！"," "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"] 愚人节，随机谎话 swal.fire(l[math.floor(math.random() * l.length)]); 劳动节 swal.fire("劳动节快乐\n为各行各业辛勤工作的人们致敬！"); 4) 青年节 swal.fire("青年节快乐\n青春不是回忆逝去,而是把握现在！"); 20) swal.fire("今年是520情人节\n快和你喜欢的人一起过吧！💑"); 建党节 swal.fire("祝中国共产党" 1921).tostring() 10) 教师节 swal.fire("各位老师们教师节快乐！👩‍🏫"); 25) 圣诞节 swal.fire("圣诞节快乐！🎄"); 11) 站长生日 swal.fire("祝站长" 1998).tostring() "岁生日快乐！🥝"); 30) 小猫咪生日 swal.fire("祝小猫咪" 1999).tostring() "岁生日快乐！🐱"); 传统节日部分 ((y="=" m="=" 5) || 4)) 清明节 swal.fire("清明时节雨纷纷,一束鲜花祭故人💐"); 22) 21) 21)) 冬至 swal.fire("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆"); var lunar="calendarFormatter.solar2lunar();" 农历采用汉字计算，防止出现闰月导致问题 ((lunar["imonthcn"]="=" "正月" lunar["idaycn"]="=" "初六") (lunar["imonthcn"]="=" "初五") "初四") "初三") "初二") "初一") "腊月" "三十") "廿九")) 春节，本来只有大年三十到初六，但是有时候除夕是大年二十九，所以也加上了 "年新年快乐\n🎊祝你心想事成，诸事顺利🎊"); "十五")) 元宵节 swal.fire("元宵节快乐\n送你一个大大的灯笼🧅"); "五月" "初五")) 端午节 swal.fire("端午节快乐\n请你吃一条粽子🍙"); "七月" "初七")) 七夕节 swal.fire("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头"); "八月" 中秋节 swal.fire("中秋节快乐\n请你吃一块月饼🍪"); "九月" "初九")) 重阳节 swal.fire("重阳节快乐\n独在异乡为异客，每逢佳节倍思亲"); 切换主题提醒 (dd>= 18 && dd <= 20)) { if (sessionstorage.getitem("ispopupwindow") !="1" ) swal.fire("网站换成冬日限定主题啦⛄"); sessionstorage.setitem("ispopupwindow", "1"); } * 节日弹窗 end ---------------------------------------------------------------- 听话鼠标 start var cursor; math.lerp="(a," b, n)> (1 - n) * a + n * b;
 
 const getStyle2 = (el, attr) => {
   try {
@@ -2680,7 +2514,7 @@ class Cursor {
         this.pt.push(el[i].outerHTML);
     var colorVal = map.get(localStorage.getItem("themeColor"));
     document.body.appendChild((this.scr = document.createElement("style")));
-    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='` + colorVal + `'/></svg>") 4 4, auto}`;
+    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 8 8" width="8px" height="8px"><circle cx="4" cy="4" r="4" opacity="1.0" fill="` + colorVal + `"/></svg>") 4 4, auto}`;
   }
 
   refresh() {
@@ -2754,7 +2588,7 @@ class Cursor {
 //     // 小于0则表示已经过年
 //     if (second < 0) {
 //       document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';
-//       document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';
+//       document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐<p></p>';
 //     } else {
 //       // 大于0则还未过年
 //       document.querySelector('#newYear .title').innerHTML = '距离2023年春节：'
@@ -2821,8 +2655,8 @@ function createtime() {
   let currentTimeHtml = "";
   (currentTimeHtml =
     hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src='https://static.naste.top:1024/svg/blog/F小屋-科研摸鱼中.svg' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
-      : `<img class='boardsign' src='https://static.naste.top:1024/svg/blog/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
+      ? `<img class="boardsign" src="https://static.naste.top:1024/svg/blog/F小屋-科研摸鱼中.svg" title="什么时候能够实现财富自由呀~"><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class="fas fa-heartbeat"></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
+      : `<img class="boardsign" src="https://static.naste.top:1024/svg/blog/F小屋-下班休息啦.svg" title="下班了就该开开心心地玩耍~"><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class="fas fa-heartbeat"></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
@@ -2863,16 +2697,12 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
 
     if (now > 1000 + lastTime) {
       var fps = Math.round((frame * 1000) / (now - lastTime));
-      if (fps <= 5) {
-        var kd = `<span style="color:#bd0000">卡成ppt🤢</span>`
-      } else if (fps <= 15) {
-        var kd = `<span style="color:red">电竞级帧率😖</span>`
-      } else if (fps <= 25) {
-        var kd = `<span style="color:orange">有点难受😨</span>`
+      if (fps <= 5) { var kd="`<span" style="color:#bd0000">卡成ppt🤢`
+      } else if (fps <= 15) { var kd="`<span" style="color:red">电竞级帧率😖`
+      } else if (fps <= 25) { var kd="`<span" style="color:orange">有点难受😨`
       } else if (fps < 35) {
         var kd = `<span style="color:#9338e6">不太流畅🙄</span>`
-      } else if (fps <= 45) {
-        var kd = `<span style="color:#08b7e4">还不错哦😁</span>`
+      } else if (fps <= 45) { var kd="`<span" style="color:#08b7e4">还不错哦😁`
       } else {
         var kd = `<span style="color:#39c5bb">十分流畅🤣</span>`
       }
@@ -2898,238 +2728,7 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
 if (localStorage.getItem("reset_4") == undefined) {
   localStorage.setItem("reset_4", "1");
   // 清空之前的标记值
-  for (var i = 1; i <= 3; i++) {
-    localStorage.removeItem("reset_" + i);
-  }
-  clearItem();
-  setTimeout(function () {
-    new Vue({
-      data: function () {
-        this.$notify({
-          title: "提示🍒",
-          message: " (｡･∀･)ﾉﾞ由于网站部分设置项更新，当前已为您重置所有设置，祝您愉快！",
-          position: 'top-left',
-          offset: 50,
-          showClose: true,
-          type: "success",
-          duration: 8000
-        });
-      }
-    })
-  }, 1500);
-}
-
-// 清除localStorage配置项
-function clearItem() {
-  localStorage.removeItem('blogbg');
-  localStorage.removeItem('universe');
-  localStorage.removeItem('blur');
-  localStorage.removeItem('fpson');
-  localStorage.removeItem('transNum');
-  localStorage.removeItem('blurRad');
-  localStorage.removeItem('font');
-  localStorage.removeItem('themeColor');
-  localStorage.removeItem('rs');
-  localStorage.removeItem('mouse');
-  localStorage.removeItem('light');
-  localStorage.removeItem('snow');
-}
-
-
-// 设置字体
-if (localStorage.getItem("font") == undefined) {
-  localStorage.setItem("font", "LXGW");
-}
-setFont(localStorage.getItem("font"));
-function setFont(n) {
-  localStorage.setItem("font", n)
-  if (n == "default") {
-    document.documentElement.style.setProperty('--global-font', '-apple-system');
-    document.body.style.fontFamily = "-apple-system, Consolas_1, BlinkMacSystemFont, 'Segoe UI' , 'Helvetica Neue' , Lato, Roboto, 'PingFang SC' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif";
-  }
-  else {
-    document.documentElement.style.setProperty('--global-font', n);
-    document.body.style.fontFamily = "var(--global-font),-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif";
-  }
-  try { setFontBorder(); } catch (err) { };
-}
-
-// 设置字体选择框边界
-function setFontBorder() {
-  var curFont = localStorage.getItem("font");
-  var swfId = "swf_" + curFont;
-  document.getElementById(swfId).style.border = "2px solid var(--theme-color)";
-  Array.prototype.forEach.call(document.getElementsByClassName("swf"), function (ee) {
-    if (ee.id != swfId) ee.style.border = "2px solid var(--border-color)";
-  });
-}
-
-
-// 设置主题色
-if (localStorage.getItem("themeColor") == undefined) {
-  localStorage.setItem("themeColor", "green");
-}
-setColor(localStorage.getItem("themeColor"));
-function setColor(c) {
-  document.getElementById("themeColor").innerText = `:root{--theme-color:` + map.get(c) + ` !important}`;
-  localStorage.setItem("themeColor", c);
-  // 刷新鼠标颜色
-  CURSOR.refresh();
-  // 设置一个带有透明度的主题色，用于菜单栏的悬浮颜色
-  var theme_color = map.get(c);
-  var trans_theme_color = "rgba" + theme_color.substring(3, theme_color.length - 1) + ", 0.7)";
-  var high_trans_color = "rgba" + theme_color.substring(3, theme_color.length - 1) + ", 0.5)";
-  document.documentElement.style.setProperty("--text-bg-hover", trans_theme_color);
-  document.documentElement.style.setProperty("--high-trans-color", high_trans_color);
-}
-
-
-// 星空背景开关
-if (localStorage.getItem("universe") == undefined) {
-  localStorage.setItem("universe", "block");
-}
-setUniverse2(localStorage.getItem("universe"));
-function setUniverse2(c) {
-  document.getElementById("universe").style.display = c;
-  localStorage.setItem("universe", c);
-}
-function setUniverse() {
-  if (document.getElementById("universeSet").checked) {
-    setUniverse2("block");
-  } else {
-    setUniverse2("none");
-  }
-}
-
-// 雪花开关
-if (localStorage.getItem("snow") == undefined) {
-  localStorage.setItem("snow", "none");
-}
-document.getElementById("snow").style.display = localStorage.getItem("snow");
-function setSnow() {
-  if (document.getElementById("snowSet").checked) {
-    document.getElementById("snow").style.display = "block";
-    localStorage.setItem("snow", "block");
-  } else {
-    document.getElementById("snow").style.display = "none";
-    localStorage.setItem("snow", "none");
-  }
-}
-
-
-// 帧率监测开关
-if (localStorage.getItem("fpson") == undefined) {
-  localStorage.setItem("fpson", "1");
-}
-function fpssw() {
-  if (document.getElementById("fpson").checked) {
-    localStorage.setItem("fpson", "1");
-  } else {
-    localStorage.setItem("fpson", "0");
-  }
-  setTimeout(reload, 600);
-}
-
-// 刷新窗口
-function reload() {
-  window.location.reload();
-}
-
-// 侧边栏开关
-if (localStorage.getItem("rs") == undefined) {
-  localStorage.setItem("rs", "block");
-}
-if (localStorage.getItem("rs") == "block") {
-  document.getElementById("rightSide").innerText = `:root{--rightside-display: block}`;
-} else {
-  document.getElementById("rightSide").innerText = `:root{--rightside-display: none}`;
-}
-function toggleRightside() {
-  // 先设置localStorage变量
-  if (document.getElementById("rightSideSet").checked) {
-    localStorage.setItem("rs", "block");
-    document.getElementById("rightSide").innerText = `:root{--rightside-display: block}`;
-  } else {
-    localStorage.setItem("rs", "none");
-    document.getElementById("rightSide").innerText = `:root{--rightside-display: none}`;
-  }
-}
-
-
-// 透明度调节滑块
-if (localStorage.getItem("transNum") == undefined) {
-  localStorage.setItem("transNum", 95);
-}
-var curTransNum = localStorage.getItem("transNum");
-var curTransMini = curTransNum * 0.95;
-document.getElementById("transPercent").innerText = `:root{--trans-light: rgba(253, 253, 253, ${curTransNum}%) !important; --trans-dark: rgba(25, 25, 25, ${curTransNum}%) !important} `;
-function setTrans() {
-  var elem = document.getElementById("transSet");
-  var newTransNum = elem.value;
-  var target = document.querySelector('.transValue');
-  target.innerHTML = "透明度 (0%-100%): " + newTransNum + "%";
-  localStorage.setItem("transNum", newTransNum);
-  curTransMini = newTransNum * 0.95;
-  curTransNum = newTransNum;  // 更新当前透明度
-  document.querySelector('#rang_trans').style.width = curTransMini + "%";
-  document.getElementById("transPercent").innerText = `:root{--trans-light: rgba(253, 253, 253, ${newTransNum}%) !important; --trans-dark: rgba(25, 25, 25, ${newTransNum}%) !important} `;
-};
-
-
-// 模糊度调节滑块
-if (localStorage.getItem("blurRad") == undefined) {
-  localStorage.setItem("blurRad", 20);
-}
-var curBlur = localStorage.getItem("blurRad"); // 当前模糊半径
-var miniBlur = curBlur * 0.95;
-document.getElementById("blurNum").innerText = `:root{--blur-num: blur(${curBlur}px) saturate(120%) !important`;
-function setBlurNum() {
-  var elem = document.getElementById("blurSet");
-  var newBlur = elem.value;
-  var target = document.querySelector('.blurValue');
-  target.innerHTML = "模糊半径 (开启模糊生效 0px-100px): " + newBlur + "px";
-  localStorage.setItem("blurRad", newBlur);
-  curBlur = newBlur;
-  miniBlur = curBlur * 0.95;
-  // var max = elem.getAttribute("max");
-  document.querySelector('#rang_blur').style.width = miniBlur + "%";
-  document.getElementById("blurNum").innerText = `:root{--blur-num: blur(${curBlur}px) saturate(120%) !important`;
-};
-
-
-// 模糊效果开关
-if (localStorage.getItem("blur") == undefined) {
-  localStorage.setItem("blur", 0);
-}
-if (localStorage.getItem("blur") == 0) {
-  document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: none}`;
-} else {
-  document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: var(--blur-num)}`;
-}
-function setBlur() {
-  if (document.getElementById("blur").checked) {
-    localStorage.setItem("blur", 1);
-    document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: var(--blur-num)}`;
-  } else {
-    localStorage.setItem("blur", 0);
-    document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: none}`;
-  }
-}
-
-// 更换背景(原来Leonus的代码)
-// 存数据
-// name：命名 data：数据
-// function saveData(name, data) {
-//   localStorage.setItem(name, JSON.stringify({ time: Date.now(), data: data }));
-// }
-// 取数据
-// name：命名 time：过期时长,单位分钟,如传入30,即加载数据时如果超出30分钟返回0,否则返回数据
-// function loadData(name, time) {
-//   let d = JSON.parse(localStorage.getItem(name));
-//   // 过期或有错误返回 0 否则返回数据
-//   if (d) {
-//     let t = Date.now() - d.time;
-//     if (t < time * 60 * 1000 && t > -1) return d.data;
+  for (var i = 1; i <= 0 60 1000 8000 3; i++) { localstorage.removeitem("reset_" + i); } clearitem(); settimeout(function () new vue({ data: function this.$notify({ title: "提示🍒", message: " (｡･∀･)ﾉﾞ由于网站部分设置项更新，当前已为您重置所有设置，祝您愉快！", position: 'top-left', offset: 50, showclose: true, type: "success", duration: }); }) }, 1500); 清除localstorage配置项 clearitem() localstorage.removeitem('blogbg'); localstorage.removeitem('universe'); localstorage.removeitem('blur'); localstorage.removeitem('fpson'); localstorage.removeitem('transnum'); localstorage.removeitem('blurrad'); localstorage.removeitem('font'); localstorage.removeitem('themecolor'); localstorage.removeitem('rs'); localstorage.removeitem('mouse'); localstorage.removeitem('light'); localstorage.removeitem('snow'); 设置字体 if (localstorage.getitem("font")="=" undefined) localstorage.setitem("font", "lxgw"); setfont(localstorage.getitem("font")); setfont(n) n) (n="=" "default") document.documentelement.style.setproperty('--global-font', '-apple-system'); document.body.style.fontfamily="-apple-system, Consolas_1, BlinkMacSystemFont, 'Segoe UI' , 'Helvetica Neue' , Lato, Roboto, 'PingFang SC' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif" ; else n); try setfontborder(); catch (err) }; 设置字体选择框边界 setfontborder() var curfont="localStorage.getItem("font");" swfid="swf_" curfont; document.getelementbyid(swfid).style.border="2px solid var(--theme-color)" array.prototype.foreach.call(document.getelementsbyclassname("swf"), (ee) (ee.id !="swfId)" ee.style.border="2px solid var(--border-color)" 设置主题色 (localstorage.getitem("themecolor")="=" localstorage.setitem("themecolor", "green"); setcolor(localstorage.getitem("themecolor")); setcolor(c) document.getelementbyid("themecolor").innertext="`:root{--theme-color:`" map.get(c) ` !important}`; c); 刷新鼠标颜色 cursor.refresh(); 设置一个带有透明度的主题色，用于菜单栏的悬浮颜色 theme_color="map.get(c);" trans_theme_color="rgba" theme_color.substring(3, theme_color.length - 1) ", 0.7)"; high_trans_color="rgba" 0.5)"; document.documentelement.style.setproperty("--text-bg-hover", trans_theme_color); document.documentelement.style.setproperty("--high-trans-color", high_trans_color); 星空背景开关 (localstorage.getitem("universe")="=" localstorage.setitem("universe", "block"); setuniverse2(localstorage.getitem("universe")); setuniverse2(c) document.getelementbyid("universe").style.display="c;" setuniverse() (document.getelementbyid("universeset").checked) setuniverse2("block"); setuniverse2("none"); 雪花开关 (localstorage.getitem("snow")="=" localstorage.setitem("snow", "none"); document.getelementbyid("snow").style.display="localStorage.getItem("snow");" setsnow() (document.getelementbyid("snowset").checked) 帧率监测开关 (localstorage.getitem("fpson")="=" localstorage.setitem("fpson", "1"); fpssw() (document.getelementbyid("fpson").checked) "0"); settimeout(reload, 600); 刷新窗口 reload() window.location.reload(); 侧边栏开关 (localstorage.getitem("rs")="=" localstorage.setitem("rs", "block") document.getelementbyid("rightside").innertext="`:root{--rightside-display:" block}`; none}`; togglerightside() 先设置localstorage变量 (document.getelementbyid("rightsideset").checked) 透明度调节滑块 (localstorage.getitem("transnum")="=" localstorage.setitem("transnum", 95); curtransnum="localStorage.getItem("transNum");" curtransmini="curTransNum" * 0.95; document.getelementbyid("transpercent").innertext="`:root{--trans-light:" rgba(253, 253, ${curtransnum}%) !important; --trans-dark: rgba(25, 25, !important} `; settrans() elem="document.getElementById("transSet");" newtransnum="elem.value;" target="document.querySelector('.transValue');" target.innerhtml="透明度 (0%-100%): " "%"; newtransnum); 更新当前透明度 document.queryselector('#rang_trans').style.width="curTransMini" ${newtransnum}%) 模糊度调节滑块 (localstorage.getitem("blurrad")="=" localstorage.setitem("blurrad", 20); curblur="localStorage.getItem("blurRad");" 当前模糊半径 miniblur="curBlur" document.getelementbyid("blurnum").innertext="`:root{--blur-num:" blur(${curblur}px) saturate(120%) !important`; setblurnum() newblur="elem.value;" "px"; newblur); max="elem.getAttribute("max");" document.queryselector('#rang_blur').style.width="miniBlur" 模糊效果开关 (localstorage.getitem("blur")="=" localstorage.setitem("blur", 0); 0) document.getelementbyid("settingstyle").innertext="`:root{--backdrop-filter:" var(--blur-num)}`; setblur() (document.getelementbyid("blur").checked) 1); 更换背景(原来leonus的代码) 存数据 name：命名 data：数据 savedata(name, data) localstorage.setitem(name, json.stringify({ time: date.now(), data })); 取数据 time：过期时长,单位分钟,如传入30,即加载数据时如果超出30分钟返回0,否则返回数据 loaddata(name, time) let d="JSON.parse(localStorage.getItem(name));" 过期或有错误返回 否则返回数据 (d) t="Date.now()" d.time; (t < time &&> -1) return d.data;
 //   }
 //   return 0;
 // }
@@ -3165,62 +2764,7 @@ function changeBgColor() {
 }
 
 // 必应每日壁纸API
-let bingDayBg = screen.width <= 768 ? "url(https://bing.img.run/m.php)" : "url(https://bing.img.run/1920x1080.php)";
-// 必应历史壁纸API
-let bingHistoryBg = screen.width <= 768 ? "url(https://bing.img.run/rand_m.php)" : "url(https://bing.img.run/rand.php)";
-// EEE.DOG
-let EEEDog = "url(https://api.yimian.xyz/img?type=moe&size=1920x1080)";
-// 随机美图cdn.seovx.com
-let seovx = "url(https://cdn.seovx.com/?mom=302)";
-// picsum随机
-let picsum = "url(https://picsum.photos/1920/1080.webp)";
-// 小歪二次元
-// let waiDongman = "url(https://api.ixiaowai.cn/api/api.php)";
-//  小歪高清壁纸
-let waiBizhi = "url(https://api.ixiaowai.cn/gqapi/gqapi.php)";
-// 博天随机
-let btstu = "url(http://api.btstu.cn/sjbz/?lx=suiji)";
-// tuapi 动漫
-// let tuapi = "url(https://tuapi.eees.cc/api.php?category=dongman)";
-// unsplash随机 https://source.unsplash.com/random/1920x1080/daily (weekly)
-let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
-
-
-// 更换背景(自己的代码)
-if (localStorage.getItem("blogbg") != undefined) {
-  setBg(localStorage.getItem("blogbg"));
-} else {
-  document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://www.naste.top:9000/webp/dm14.webp);
-    --darkmode-bg:url(https://www.naste.top:9000/webp/yuanshen1.webp);
-    --mobileday-bg: url(https://www.naste.top:9000/webp/snow.webp);
-    --mobilenight-bg: url(https://www.naste.top:9000/webp/mb8.webp);
-  }`;
-}
-// 切换背景主函数
-function changeBg(s) {
-  // 自定义颜色框
-  defineColor = s.charAt(0) == "#" ? s : '#F4D88A';
-  setBg(s);
-  localStorage.setItem("blogbg", s);
-}
-// 设置背景属性
-function setBg(s) {
-  document.getElementById("defineBg").innerText = `:root{
-    --default-bg: ${s};
-    --darkmode-bg: ${s};
-    --mobileday-bg: ${s};
-    --mobilenight-bg: ${s};
-  }`;
-}
-
-// 切换链接对应的背景(加入了链接检验与防抖)
-function getPicture() {
-  debounce(getPicture_, 300);
-}
-
-function getPicture_() {
-  checkImgExists(document.getElementById("pic-link").value).then(() => {
+let bingDayBg = screen.width <= 768 ? "url(https: bing.img.run m.php)" : 1920x1080.php)"; 必应历史壁纸api let binghistorybg="screen.width" <="768" rand_m.php)" rand.php)"; eee.dog eeedog="url(https://api.yimian.xyz/img?type=moe&size=1920x1080)" ; 随机美图cdn.seovx.com seovx="url(https://cdn.seovx.com/?mom=302)" picsum随机 picsum="url(https://picsum.photos/1920/1080.webp)" 小歪二次元 waidongman="url(https://api.ixiaowai.cn/api/api.php)" 小歪高清壁纸 waibizhi="url(https://api.ixiaowai.cn/gqapi/gqapi.php)" 博天随机 btstu="url(http://api.btstu.cn/sjbz/?lx=suiji)" tuapi 动漫 unsplash随机 https: source.unsplash.com random 1920x1080 daily (weekly) unsplash="url(https://source.unsplash.com/random/1920x1080/)" 更换背景(自己的代码) if (localstorage.getitem("blogbg") !="undefined)" { setbg(localstorage.getitem("blogbg")); } else document.getelementbyid("definebg").innertext="`:root{" --default-bg: url(https: www.naste.top:9000 webp dm14.webp); --darkmode-bg:url(https: yuanshen1.webp); --mobileday-bg: snow.webp); --mobilenight-bg: mb8.webp); }`; 切换背景主函数 function changebg(s) 自定义颜色框 definecolor="s.charAt(0)" =="#" s '#f4d88a'; setbg(s); localstorage.setitem("blogbg", s); 设置背景属性 setbg(s) ${s}; --darkmode-bg: 切换链接对应的背景(加入了链接检验与防抖) getpicture() debounce(getpicture_, 300); getpicture_() checkimgexists(document.getelementbyid("pic-link").value).then(()> {
     // 有效的图片链接
     var link = "url(" + document.getElementById("pic-link").value + ")";
     changeBg(link);
@@ -3360,11 +2904,11 @@ function createWinbox() {
 <br>
 <center><p><button onclick="reset()" style="background:linear-gradient(to right, #fc354c, #0abfbc);display:block;width:40%;padding:15px 0;border-radius:30px;color:white;font-size:1.1em;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认设置</button></p></center>
 
-<h2>一、显示偏好</h2>
+<h2><span id="一-显示偏好">一、显示偏好</span></h2>
 
 <div class="transValue" style="font-weight:bold;padding-left:10px">透明度 (0%-100%): ${curTransNum}%</div>
 <div class="range">
-  <input id="transSet" type="range" min="0" max="100" step="1" value=${curTransNum} oninput="setTrans()">
+  <input id="transSet" type="range" min="0" max="100" step="1" value="${curTransNum}" oninput="setTrans()">
   <p class="rang_width" id="rang_trans" style="width:${curTransMini}%"></p>
 </div>
 
@@ -3391,7 +2935,7 @@ function createWinbox() {
 </div>
 
 
-<h2>二、字体设置</h2>
+<h2><span id="二-字体设置">二、字体设置</span></h2>
 <div class="note warning modern"><p>非商免字体未经授权只能个人使用。本站为完全非商业、非盈利性质的网站，平时用于个人学习交流，如有侵权请联系站长删除，谢谢！ —— 致版权方</p>
 </div>
 <p id="swfs">
@@ -3404,83 +2948,72 @@ function createWinbox() {
 <a class="swf" id="swf_default" href="javascript:;" rel="noopener external nofollow" style="font-family:-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif;!important;color:black" onclick="setFont('default')">系统默认</a>
 </p>
 
-<h2>三、主题色设置</h2>
-<div class="content" style="display:flex"><input type="radio" id="red" name="colors" value=" "
-        onclick="setColor('red')"><input type="radio" id="orange" name="colors" value=" "
-        onclick="setColor('orange')"><input type="radio" id="yellow" name="colors" value=" "
-        onclick="setColor('yellow')"><input type="radio" id="green" name="colors" value=" "
-        onclick="setColor('green')"><input type="radio" id="blue" name="colors" value=" "
-        onclick="setColor('blue')"><input type="radio" id="heoblue" name="colors" value=" "
-        onclick="setColor('heoblue')"><input type="radio" id="darkblue" name="colors" value=" "
-        onclick="setColor('darkblue')"><input type="radio" id="purple" name="colors" value=" "
-        onclick="setColor('purple')"><input type="radio" id="pink" name="colors" value=" "
-        onclick="setColor('pink')" checked="checked"><input type="radio" id="black" name="colors" value=" "
-        onclick="setColor('black')"><input type="radio" id="blackgray" name="colors" value=" "
-        onclick="setColor('blackgray')"></div>
+<h2><span id="三-主题色设置">三、主题色设置</span></h2>
+<div class="content" style="display:flex"><input type="radio" id="red" name="colors" value=" " onclick="setColor('red')"><input type="radio" id="orange" name="colors" value=" " onclick="setColor('orange')"><input type="radio" id="yellow" name="colors" value=" " onclick="setColor('yellow')"><input type="radio" id="green" name="colors" value=" " onclick="setColor('green')"><input type="radio" id="blue" name="colors" value=" " onclick="setColor('blue')"><input type="radio" id="heoblue" name="colors" value=" " onclick="setColor('heoblue')"><input type="radio" id="darkblue" name="colors" value=" " onclick="setColor('darkblue')"><input type="radio" id="purple" name="colors" value=" " onclick="setColor('purple')"><input type="radio" id="pink" name="colors" value=" " onclick="setColor('pink')" checked="checked"><input type="radio" id="black" name="colors" value=" " onclick="setColor('black')"><input type="radio" id="blackgray" name="colors" value=" " onclick="setColor('blackgray')"></div>
 
-<h2>四、背景设置</h2>
+<h2><span id="四-背景设置">四、背景设置</span></h2>
 <center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>
 
-<h3>1. 二次元</h3>
+<h3><span id="1-二次元">1. 二次元</span></h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
-              <div class='content'>
+              <div class="content">
               <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://www.naste.top:9000/webp/1678672750.webp)" class="imgbox" onclick="changeBg('url(https://www.naste.top:9000/webp/1678672763.webp)')"></a></div>
               </div>
             </details>
 
 
-<h3>2. 风景</h3>
+<h3><span id="2-风景">2. 风景</span></h3>
 
 <details class="folding-tag" cyan><summary> 查看风景背景 </summary>
-              <div class='content'>
+              <div class="content">
               <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://www.naste.top:9000/webp/1678672807.webp)" class="imgbox" onclick="changeBg('url(https://www.naste.top:9000/webp/1678672887.webp)')"></a></div>
               </div>
             </details>
 
-<h3>3. 萌宠</h3>
+<h3><span id="3-萌宠">3. 萌宠</span></h3>
 
 <details class="folding-tag" cyan><summary> 查看萌宠背景 </summary>
-              <div class='content'>
+              <div class="content">
               <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://www.naste.top:9000/webp/1678672849.webp)" class="imgbox" onclick="changeBg('url(https://www.naste.top:9000/webp/1678672858.webp)')"></a></div>
               </div>
             </details>
 
-<h3>4. 渐变色</h3>
+<h3><span id="4-渐变色">4. 渐变色</span></h3>
 <details class="folding-tag" cyan><summary> 查看渐变色背景 </summary>
-              <div class='content'>
+              <div class="content">
               <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to right, #544a7d, #ffd452)" onclick="changeBg('linear-gradient(to right, #544a7d, #ffd452)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to bottom, #7f7fd5, #86a8e7, #91eae4)" onclick="changeBg('linear-gradient(to bottom, #7f7fd5, #86a8e7, #91eae4)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to left, #654ea3, #eaafc8)" onclick="changeBg('linear-gradient(to left, #654ea3, #eaafc8)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to top, #feac5e, #c779d0, #4bc0c8)" onclick="changeBg('linear-gradient(to top, #feac5e, #c779d0, #4bc0c8)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to top, #d3959b, #bfe6ba)" onclick="changeBg('linear-gradient(to top, #d3959b, #bfe6ba)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to top, #8360c3, #2ebf91)" onclick="changeBg('linear-gradient(to top, #8360c3, #2ebf91)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to top, #108dc7, #ef8e38)" onclick="changeBg('linear-gradient(to top, #108dc7, #ef8e38)')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: linear-gradient(to top, #355c7d, #6c5b7b, #c06c84)" onclick="changeBg('linear-gradient(to top, #355c7d, #6c5b7b, #c06c84)')"></a></div>
               </div>
             </details>
 
 
-<h3>5. 纯色</h3>
+<h3><span id="5-纯色">5. 纯色</span></h3>
 <details class="folding-tag" cyan><summary> 查看纯色背景 </summary>
-              <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #ecb1b1" onclick="changeBg('#ecb1b1')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #d3ebac" onclick="changeBg('#d3ebac')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #ace9ce" onclick="changeBg('#ace9ce')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #c1ebea" onclick="changeBg('#c1ebea')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #dee7f1" onclick="changeBg('#dee7f1')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #e9e3f2" onclick="changeBg('#e9e3f2')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #f7eff5" onclick="changeBg('#f7eff5')"></a>  <input type="color" id="define_colors" href="javascript:;" rel="noopener external nofollow" class="box" autocomplete="on" value="${defineColor}" oninput="changeBgColor()"></input></div>
+              <div class="content">
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #ecb1b1" onclick="changeBg('#ecb1b1')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #d3ebac" onclick="changeBg('#d3ebac')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #ace9ce" onclick="changeBg('#ace9ce')"></a><a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #c1ebea" onclick="changeBg('#c1ebea')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #dee7f1" onclick="changeBg('#dee7f1')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #e9e3f2" onclick="changeBg('#e9e3f2')"></a> <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #f7eff5" onclick="changeBg('#f7eff5')"></a>  <input type="color" id="define_colors" href="javascript:;" rel="noopener external nofollow" class="box" autocomplete="on" value="${defineColor}" oninput="changeBgColor()"></div>
               </div>
             </details>
 
 
 
-<h3>6. 适配手机</h3>
+<h3><span id="6-适配手机">6. 适配手机</span></h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的背景 </summary>
-              <div class='content'>
+              <div class="content">
               <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://www.naste.top:9000/webp/1678672851.webp)" class="pimgbox" onclick="changeBg('url(https://www.naste.top:9000/webp/1678672852.webp)')"></a></div>
               </div>
             </details>
 
 
-<h3>7. 壁纸API</h3>
+<h3><span id="7-壁纸api">7. 壁纸API</span></h3>
 <details class="folding-tag" cyan><summary> 查看壁纸API系列背景 </summary>
-              <div class='content'>
+              <div class="content">
               <div class="bgbox"><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="EEEDogBox" rel="noopener external nofollow" style="background-image: ${EEEDog}" class="box apiBox" onclick="changeBg('${EEEDog}')"></a><a id="seovxBox" rel="noopener external nofollow" style="background-image: ${seovx}" class="box apiBox" onclick="changeBg('${seovx}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="waiBizhiBox" rel="noopener external nofollow" style="background-image: ${waiBizhi}" class="box apiBox" onclick="changeBg('${waiBizhi}')"></a><a id="btstuBox" rel="noopener external nofollow" style="background-image: ${btstu}" class="box apiBox" onclick="changeBg('${btstu}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a></div>
               </div>
             </details>
 
 
-<h3>8. 自定义背景</h3>
+<h3><span id="8-自定义背景">8. 自定义背景</span></h3>
 <details class="folding-tag" cyan><summary> 设置自定义背景 </summary>
-              <div class='content'>
+              <div class="content">
               <p><center><input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://www.naste.top:9000/webp/home_bg.webp"></center></p><p><center><button type="button" onclick="getPicture()" style="background:var(--theme-color);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button></center></p>
               </div>
             </details>
@@ -3546,23 +3079,4 @@ function reset() {
 function winResize() {
   try {
     var offsetWid = document.documentElement.clientWidth;
-    if (offsetWid <= 768) {
-      winbox.resize(offsetWid * 0.95 + "px", "90%").move("center", "center");
-    } else {
-      winbox.resize(offsetWid * 0.6 + "px", "70%").move("center", "center");
-    }
-  } catch (err) {
-    // console.log("Pjax毒瘤抽风运行winResize方法🙄🙄🙄");
-  }
-}
-
-// 切换状态，窗口已创建则控制窗口显示和隐藏，没窗口则创建窗口
-function toggleWinbox() {
-  if (document.querySelector("#meihuaBox")) {
-    winbox.toggleClass("hide");
-  } else {
-    createWinbox();
-  };
-}
-
-/* 美化模块 end */
+    if (offsetWid </=></=></=></=></=></=></=></=></=></=></=></=></=></|></=></=></=>
