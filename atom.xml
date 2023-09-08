@@ -6,7 +6,7 @@
   <link href="https://www.naste.top:1024/atom.xml" rel="self"/>
   
   <link href="https://www.naste.top:1024/"/>
-  <updated>2023-08-23T14:53:30.352Z</updated>
+  <updated>2023-09-08T10:46:35.662Z</updated>
   <id>https://www.naste.top:1024/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SpringBoot前后端分离集成SpringSecurity</title>
+    <link href="https://www.naste.top:1024/posts/2824886599.html"/>
+    <id>https://www.naste.top:1024/posts/2824886599.html</id>
+    <published>2023-09-08T07:52:20.000Z</published>
+    <updated>2023-09-08T10:46:35.662Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p><p><img src="https://www.naste.top:9000/webp/20230908182843.webp" alt="20230908182843"></p><ul><li>自定义用户认证逻辑类，实现<code>implements UserDetailsService</code><ul><li>当用户登录，请求放行的登录地址，将会被触发</li></ul></li><li>认证失败处理类，实现<code>implements AuthenticationEntryPoint</code><ul><li>当访问没有权限会触发</li></ul></li><li>登录退出处理类，实现<code>implements LogoutSuccessHandler</code>：<ul><li>当用户请求配置的登录退出请求时，会触发</li></ul></li><li>token认证过滤器【可选】</li><li>跨域过滤器【可选】</li><li>允许匿名访问的地址【可选】</li></ul><p>ThreadLocal：通过本地线程锁获取当前线程的上下文信息</p>]]></content>
+    
+    
+    <summary type="html">SpringBoot前后端分离集成SpringSecurity</summary>
+    
+    
+    
+    <category term="Java" scheme="https://www.naste.top:1024/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringSecurity" scheme="https://www.naste.top:1024/tags/SpringSecurity/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>虚拟机网络模式</title>
     <link href="https://www.naste.top:1024/posts/644582412.html"/>
     <id>https://www.naste.top:1024/posts/644582412.html</id>
     <published>2023-08-20T11:42:18.000Z</published>
-    <updated>2023-08-23T14:53:30.352Z</updated>
+    <updated>2023-08-23T14:55:55.333Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p><h1 id="网络模式"><a href="#网络模式" class="headerlink" title="网络模式"></a>网络模式</h1><ul><li>NAT</li><li>NAT网络</li><li>桥接</li><li>内部网络</li><li>仅主机</li></ul>]]></content>
     
@@ -83,9 +108,9 @@
     
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="SpringSecurity" scheme="https://www.naste.top:1024/tags/SpringSecurity/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
   </entry>
   
@@ -460,29 +485,6 @@
     <category term="RabbitMQ" scheme="https://www.naste.top:1024/tags/RabbitMQ/"/>
     
     <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用JavaScript修改网页任意元素的文本内容</title>
-    <link href="https://www.naste.top:1024/posts/1455011995.html"/>
-    <id>https://www.naste.top:1024/posts/1455011995.html</id>
-    <published>2023-05-15T06:33:56.000Z</published>
-    <updated>2023-05-15T06:51:42.190Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p><p><img src="https://www.naste.top:9000/images/image-20230515145106241.png" alt="image-20230515145106241"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一：</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">contentEditable</span>=<span class="string">&quot;true&quot;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法二：</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">designMode</span>=<span class="string">&#x27;on&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">使用JavaScript修改网页任意元素的文本内容</summary>
-    
-    
-    
-    <category term="前端" scheme="https://www.naste.top:1024/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="前端" scheme="https://www.naste.top:1024/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="JavaScript" scheme="https://www.naste.top:1024/tags/JavaScript/"/>
     
   </entry>
   
