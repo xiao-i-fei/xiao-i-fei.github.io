@@ -6,7 +6,7 @@
   <link href="https://www.naste.top:1024/atom.xml" rel="self"/>
   
   <link href="https://www.naste.top:1024/"/>
-  <updated>2023-09-25T13:46:58.648Z</updated>
+  <updated>2023-09-25T13:47:24.864Z</updated>
   <id>https://www.naste.top:1024/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.naste.top:1024/posts/2525108947.html"/>
     <id>https://www.naste.top:1024/posts/2525108947.html</id>
     <published>2023-09-24T13:36:39.000Z</published>
-    <updated>2023-09-25T13:46:58.648Z</updated>
+    <updated>2023-09-25T13:47:24.864Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p><h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.googlecode.juniversalchardet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>juniversalchardet<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.mozilla.universalchardet.UniversalDetector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 文件编码工具类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FileEncodingUtils</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 检测文件编码</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 文件编码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">detectFileEncoding</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">UniversalDetector</span> <span class="variable">detector</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UniversalDetector</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">byte</span>[] buffer = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="type">int</span> nread;</span><br><span class="line">        <span class="keyword">while</span> ((nread = inputStream.read(buffer)) &gt; <span class="number">0</span> &amp;&amp; !detector.isDone()) &#123;</span><br><span class="line">            detector.handleData(buffer, <span class="number">0</span>, nread);</span><br><span class="line">        &#125;</span><br><span class="line">        detector.dataEnd();</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">detectedCharset</span> <span class="operator">=</span> detector.getDetectedCharset();</span><br><span class="line">        <span class="keyword">if</span> (detectedCharset == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果检测不到编码，则使用默认编码</span></span><br><span class="line">            detectedCharset = <span class="string">&quot;UTF-8&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        detector.reset();</span><br><span class="line">        <span class="keyword">return</span> detectedCharset;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -40,25 +40,27 @@
   </entry>
   
   <entry>
-    <title>Java中使用WebSocket</title>
+    <title></title>
     <link href="https://www.naste.top:1024/posts/3435753282.html"/>
     <id>https://www.naste.top:1024/posts/3435753282.html</id>
-    <published>2023-09-12T09:56:16.000Z</published>
-    <updated>2023-09-25T13:46:43.615Z</updated>
+    <published>2023-09-12T09:56:16.121Z</published>
+    <updated>2023-09-25T13:47:24.859Z</updated>
     
-    <content type="html"><![CDATA[<p> Java</p><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p>]]></content>
-    
-    
-    <summary type="html">Java中使用WebSocket</summary>
+    <content type="html"><![CDATA[<hr><p>title: Java中使用WebSocket<br>tags:</p><ul><li>Java</li><li>SpringBoot</li><li>WebSocket<br>keywords: Java中使用WebSocket<br>description: Java中使用WebSocket<br>cover: <a href="https://www.naste.top:9000/webp/1678672857.webp">https://www.naste.top:9000/webp/1678672857.webp</a><br>mathjax: true<br>date: 2023-09-12 17:56:16<br>categories:<br>—- Java</li></ul><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p>]]></content>
     
     
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;title: Java中使用WebSocket&lt;br&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;SpringBoot&lt;/li&gt;
+&lt;li&gt;WebSocket&lt;br&gt;keywords: Java中使用WebSocket&lt;br&gt;descripti</summary>
+      
     
     
-    <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
-    <category term="WebSocket" scheme="https://www.naste.top:1024/tags/WebSocket/"/>
     
   </entry>
   
@@ -206,9 +208,9 @@
     
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Hutool" scheme="https://www.naste.top:1024/tags/Hutool/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
   </entry>
   
