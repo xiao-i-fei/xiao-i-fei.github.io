@@ -50,7 +50,7 @@
     <link href="https://www.naste.top:1024/posts/994286255.html"/>
     <id>https://www.naste.top:1024/posts/994286255.html</id>
     <published>2023-10-26T01:09:12.000Z</published>
-    <updated>2023-10-27T15:12:50.249Z</updated>
+    <updated>2023-10-28T05:06:14.297Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p><h1 id="问题出现原因"><a href="#问题出现原因" class="headerlink" title="问题出现原因"></a>问题出现原因</h1><p>MySQL如果频繁的修改一个表的数据，那么这么表会被锁死。造成假死现象。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><ul><li><p>检查是否有其他正在运行的长时间查询或事务。您可以使用以下命令查看当前正在运行的查询：</p>  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> PROCESSLIST;</span><br></pre></td></tr></table></figure></li><li><p>如果发现有长时间运行的查询或事务，使用下面的命令终止掉，其中 <code>[id]</code> 是长时间运行查询或事务的进程 ID。</p>  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KILL [id];</span><br></pre></td></tr></table></figure></li></ul><p><img src="https://www.naste.top:9000/images/20231026094033.png" alt=""></p>]]></content>
     
@@ -59,9 +59,9 @@
     
     
     
-    <category term="数据库" scheme="https://www.naste.top:1024/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="中间件" scheme="https://www.naste.top:1024/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
-    <category term="MySQL" scheme="https://www.naste.top:1024/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
+    <category term="MySQL" scheme="https://www.naste.top:1024/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/MySQL/"/>
     
     
     <category term="MySQL" scheme="https://www.naste.top:1024/tags/MySQL/"/>
