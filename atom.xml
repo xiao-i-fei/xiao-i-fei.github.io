@@ -6,7 +6,7 @@
   <link href="https://www.naste.top:1024/atom.xml" rel="self"/>
   
   <link href="https://www.naste.top:1024/"/>
-  <updated>2024-02-06T12:41:04.017Z</updated>
+  <updated>2024-02-06T12:45:58.728Z</updated>
   <id>https://www.naste.top:1024/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[object Object]</title>
+    <title>使用MinIO Client迁移MinIO数据</title>
     <link href="https://www.naste.top:1024/posts/2185937872.html"/>
     <id>https://www.naste.top:1024/posts/2185937872.html</id>
     <published>2024-02-06T11:59:23.000Z</published>
-    <updated>2024-02-06T12:41:04.017Z</updated>
+    <updated>2024-02-06T12:45:58.728Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>[TOC]</p><h1 id="迁移旧MinIO数据到新版MinIO中"><a href="#迁移旧MinIO数据到新版MinIO中" class="headerlink" title="迁移旧MinIO数据到新版MinIO中"></a>迁移旧MinIO数据到新版MinIO中</h1><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.8&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 新版本minio</span></span><br><span class="line">  <span class="attr">minio_new:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">minio_new</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">minio/minio:RELEASE.2024-02-04T22-36-13Z</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MINIO_ROOT_USER:</span> <span class="string">$&#123;MINIO_ROOT_USER&#125;</span></span><br><span class="line">      <span class="attr">MINIO_ROOT_PASSWORD:</span> <span class="string">$&#123;MINIO_ROOT_PASSWORD&#125;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">xiaofei-net</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;29000:9000&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;29090:9090&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./minio_new/data:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./minio_new/certs:/root/.minio/certs</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">server</span> <span class="string">/data</span> <span class="string">--console-address</span> <span class="string">&quot;:9090&quot;</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 旧版本minio</span></span><br><span class="line">  <span class="attr">minio:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">minio</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">minio/minio:RELEASE.2023-03-20T20-16-18Z</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MINIO_ROOT_USER:</span> <span class="string">$&#123;MINIO_ROOT_USER&#125;</span></span><br><span class="line">      <span class="attr">MINIO_ROOT_PASSWORD:</span> <span class="string">$&#123;MINIO_ROOT_PASSWORD&#125;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">xiaofei-net</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;9000:9000&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;9090:9090&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./minio/data:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./minio/certs:/root/.minio/certs</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">server</span> <span class="string">/data</span> <span class="string">--console-address</span> <span class="string">&quot;:9090&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># minio客户端</span></span><br><span class="line">  <span class="attr">minio_mc:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">minio_mc</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">minio/mc:RELEASE.2024-01-31T08-59-40Z</span></span><br><span class="line">    <span class="attr">entrypoint:</span> <span class="string">/bin/sh</span>      <span class="comment"># 设置入口点为 /bin/sh</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">-c</span> <span class="string">&quot;/bin/sh&quot;</span>    <span class="comment"># 传递命令以运行 /bin/sh</span></span><br><span class="line">    <span class="attr">stdin_open:</span> <span class="literal">true</span>          <span class="comment"># 保持标准输入开启，用于交互式会话</span></span><br><span class="line">    <span class="attr">tty:</span> <span class="literal">true</span>                 <span class="comment"># 为交互式会话分配一个伪终端</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">xiaofei-net</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./minio_mc/data:/root/.mc/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">xiaofei-net:</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="在minio-client中配置minio信息"><a href="#在minio-client中配置minio信息" class="headerlink" title="在minio client中配置minio信息"></a>在minio client中配置minio信息</h2><blockquote><p><strong>如果使用的是https访问，加上<code>--insecure</code>跳过https验证</strong></p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入minio client 客户端中</span></span><br><span class="line">docker exec -it minio_mc bash</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">mc --insecure <span class="built_in">alias</span> <span class="built_in">set</span> 别名 minio后端链接端口 管理员账号 管理员密码</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置新minio的配置</span></span><br><span class="line">mc --insecure alias set minio_new https://127.0.0.1:29000/ 用户名 密码</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置旧minio的配置</span></span><br><span class="line">mc --insecure alias set minio_old https://127.0.0.1:9000/ 用户名 密码</span><br></pre></td></tr></table></figure><h2 id="数据迁移"><a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1. 全量迁移，重名文件不覆盖，如bucket不存在，会自动创建</span></span><br><span class="line">mc --insecure mirror minio_old minio_new</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2. 只迁移某个bucket，以<span class="built_in">test</span>为例，迁移的目标bucket需要提前创建</span></span><br><span class="line">mc --insecure mirror minio_old/test  minio_new/test  #test要提前在minio2023中创建</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3. 加上--overwrite参数，覆盖重名文件</span></span><br><span class="line">mc --insecure mirror --overwrite  minio_old minio_new</span><br><span class="line">mc --insecure mirror --overwrite  minio_old/test  minio_new/te</span><br></pre></td></tr></table></figure><blockquote><p><strong>迁移之后可以到minio页面上进行查看，看数据是否迁移成功</strong></p><p><strong>如果需要，将文件夹名字修改，然后将新文件夹名字改成为旧文件夹名字</strong></p></blockquote><h2 id="minio升级后其他配置"><a href="#minio升级后其他配置" class="headerlink" title="minio升级后其他配置"></a>minio升级后其他配置</h2><p><img src="https://www.naste.top:9000/images/20240206203420.png" alt=""></p><p><img src="https://www.naste.top:9000/images/20240206203951.png" alt=""></p>]]></content>
     
     
-    <summary type="html">[object Object]</summary>
+    <summary type="html">使用MinIO Client迁移MinIO数据</summary>
     
     
     
@@ -37,9 +37,9 @@
     
     <category term="Linux" scheme="https://www.naste.top:1024/tags/Linux/"/>
     
-    <category term="MinIO" scheme="https://www.naste.top:1024/tags/MinIO/"/>
-    
     <category term="Docker" scheme="https://www.naste.top:1024/tags/Docker/"/>
+    
+    <category term="MinIO" scheme="https://www.naste.top:1024/tags/MinIO/"/>
     
   </entry>
   
@@ -135,9 +135,9 @@
     <category term="SpringBoot使用" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/SpringBoot%E4%BD%BF%E7%94%A8/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
   </entry>
   
@@ -260,9 +260,9 @@
     <category term="认证授权" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="Sa-Token" scheme="https://www.naste.top:1024/tags/Sa-Token/"/>
     
@@ -312,9 +312,9 @@
     <category term="第三方SDK整合" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E7%AC%AC%E4%B8%89%E6%96%B9SDK%E6%95%B4%E5%90%88/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="Logback" scheme="https://www.naste.top:1024/tags/Logback/"/>
     
@@ -345,9 +345,9 @@
     <category term="第三方SDK整合" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E7%AC%AC%E4%B8%89%E6%96%B9SDK%E6%95%B4%E5%90%88/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="WebSocket" scheme="https://www.naste.top:1024/tags/WebSocket/"/>
     
@@ -374,9 +374,9 @@
     <category term="第三方SDK整合" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E7%AC%AC%E4%B8%89%E6%96%B9SDK%E6%95%B4%E5%90%88/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="Redisson" scheme="https://www.naste.top:1024/tags/Redisson/"/>
     
@@ -403,9 +403,9 @@
     <category term="认证授权" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="kaptcha" scheme="https://www.naste.top:1024/tags/kaptcha/"/>
     
@@ -432,9 +432,9 @@
     <category term="第三方SDK整合" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E7%AC%AC%E4%B8%89%E6%96%B9SDK%E6%95%B4%E5%90%88/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="juniversalchardet" scheme="https://www.naste.top:1024/tags/juniversalchardet/"/>
     
@@ -461,9 +461,9 @@
     <category term="认证授权" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="SpringSecurity" scheme="https://www.naste.top:1024/tags/SpringSecurity/"/>
     
@@ -540,9 +540,9 @@
     <category term="认证授权" scheme="https://www.naste.top:1024/categories/Java/SpringBoot/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/"/>
     
     
-    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
-    
     <category term="Java" scheme="https://www.naste.top:1024/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://www.naste.top:1024/tags/SpringBoot/"/>
     
     <category term="SpringSecurity" scheme="https://www.naste.top:1024/tags/SpringSecurity/"/>
     
